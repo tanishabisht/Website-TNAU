@@ -23,8 +23,8 @@
     align-items: center;
 }
 .logo {
-    height: 6rem;
-    width: 6rem;
+    height: 5rem;
+    width: 5rem;
     margin-right: 1rem;
 }
 .header_name {
@@ -61,7 +61,7 @@ nav {
 
 /* Dropdown Menu */
 .dropdown-menu {
-    background-color: #010b11;
+    background-color: #010e15;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
 }
@@ -70,7 +70,7 @@ nav {
     font-weight: 300;
 }
 .dropdown-item:hover {
-    background-color: #01080c;
+    background-color: #0f2631;
     color: #fff;
 }
 
