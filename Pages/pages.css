@@ -1,28 +1,41 @@
-.content_container {
-    margin: 5rem;
-}
-
 .main_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5rem 0;
+    margin-top: 6rem;
 }
 
-.hero_content_image_container {
+
+
+/* HERO IMAGE */
+.hero_img_container {
+    margin: 0 5rem;
+}
+.border_container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.hero_content_image {
+.border_container::before {
+    position: absolute;
+    content:'';
+    top: -20px;
+    border: 1px solid #fff;
+    width: 103%;
+    height: 100%;
+}
+.hero_img {
     height: 30rem;
     width: 100%;
     object-fit: cover;
-}
+    position: relative;
+} 
 
 
 
+/* WRITTEN CONTENT */
 .hero_content_container {
     background-color: #000000aa;
     color: #fff;
@@ -39,4 +52,81 @@
 }
 .hero_content_container p {
     text-align: justify;
+}
+
+
+
+/* BODY IMAGES */
+.body_img_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.body_img {
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.body_border_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem 5rem 2rem;
+}
+.body_border_container::before {
+    position: absolute;
+    content:'';
+    top: 10px;
+    border: 1px solid #fff;
+    width: 105%;
+    height: 100%;
+}
+
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 1300px) {
+    /* content */
+    .hero_content_container {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    /* img */
+    .hero_img_container {
+        margin: 0 2rem;
+    }
+    .hero_img {
+        height: 25rem;
+    }
+    .border_container::before {
+        width: 105%;
+        top: -15px;
+    }
+    /* content */
+    .hero_content_container {
+        padding: 2rem;
+    }
+    /* body imgs */
+    .body_img_container {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 576px) {
+    /* img */
+    .hero_img {
+        height: 20rem;
+    }
+    .border_container::before {
+        width: 106%;
+        top: -10px;
+    }
+    /* content */
+    .hero_content_container h1 {
+        font-size: 2rem;
+    }
+    .hero_content_container p {
+        font-size: 0.8rem;
+    }
 }
