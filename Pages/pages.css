@@ -68,6 +68,9 @@
     object-fit: cover;
     position: relative;
 }
+.body_img_one {
+    height: 15rem;
+}
 .body_border_container {
     position: relative;
     display: flex;
